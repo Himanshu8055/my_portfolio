@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { 
-  Github, Mail, MapPin, Terminal, Code, Database, 
+import {
+  Github, Mail, MapPin, Terminal, Code, Database,
   Book, ChevronDown, ExternalLink, Brain, Puzzle,
   Cpu, Radio, Waves, Laptop, Share2, Code2, MessageSquare
 } from 'lucide-react';
@@ -80,7 +80,7 @@ const Portfolio = () => {
   };
 
   const CustomCursor = () => (
-    <div 
+    <div
       ref={cursorRef}
       className="fixed w-8 h-8 pointer-events-none z-50 mix-blend-difference"
       style={{
@@ -105,9 +105,8 @@ const Portfolio = () => {
         <div
           key={section}
           onClick={() => scrollToSection(section)}
-          className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
-            activeSection === section ? 'bg-blue-500 scale-150' : 'bg-gray-500 hover:bg-blue-400'
-          }`}
+          className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${activeSection === section ? 'bg-blue-500 scale-150' : 'bg-gray-500 hover:bg-blue-400'
+            }`}
         />
       ))}
     </div>
@@ -115,7 +114,7 @@ const Portfolio = () => {
 
   const ProgressBar = () => (
     <div className="fixed top-0 left-0 w-full h-1 z-50">
-      <div 
+      <div
         className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
         style={{ width: `${scrollProgress}%` }}
       >
@@ -172,10 +171,10 @@ const Portfolio = () => {
                   </span>
                 </h1>
                 <p className="text-2xl md:text-3xl text-gray-300 max-w-3xl mx-auto opacity-0 animate-fade-in-delay-1">
-                  Frontend Developer  
+                  Frontend Developer
                 </p>
                 <div className="flex justify-center text-sm md:text-lg lg:text-xl gap-6 text-gray-300 opacity-0 animate-fade-in-delay-2">
-                  <a 
+                  <a
                     href="mailto:khv8055@gmail.com"
                     className="group flex items-center gap-2 hover:text-blue-400 transition-colors duration-300"
                   >
@@ -190,7 +189,7 @@ const Portfolio = () => {
                   </span>
                 </div>
                 <div className="absolute  left-1/2 transform -translate-x-1/2 animate-bounce">
-                  <ChevronDown size={32} className="text-gray-400"/>
+                  <ChevronDown size={32} className="text-gray-400" />
                 </div>
               </div>
             </div>
@@ -223,7 +222,7 @@ const Portfolio = () => {
                                 <span className="font-medium">{skill.name}</span>
                               </div>
                               <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                                <div 
+                                <div
                                   className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-1000 group-hover/skill:animate-pulse"
                                   style={{ width: `${skill.proficiency}%` }}
                                 />
@@ -247,30 +246,70 @@ const Portfolio = () => {
                   Featured Projects
                 </span>
               </h2>
-              <div className="max-w-4xl mx-auto">
+              <div className="max-w-4xl mx-auto space-y-16">
+                {/* Portfolio Project */}
                 <div className="group relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
                   <div className="relative bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 ring-1 ring-gray-700/50 hover:ring-purple-500/50 transition-all duration-300">
-                    <div className="flex items-start justify-between">
-                      <div>
+                    <div className="flex flex-col gap-4">
+                      <div className="flex items-start justify-between">
+                        <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+                          Personal Portfolio
+                        </h3>
+                        <div className="flex space-x-4">
+                          {['vite', 'React', 'Tailwind'].map((tech, idx) => (
+                            <span
+                              key={idx}
+                              className="px-3 py-1 text-sm bg-gray-700/50 rounded-full hover:bg-blue-500/20 transition-colors"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-300 max-w-full">
+                        A modern, responsive portfolio website showcasing my skills, projects, and educational background.
+                        Built with React and styled with Tailwind CSS, featuring smooth animations and interactive elements.
+                      </p>
+                    </div>
+                    <div className="mt-6">
+                      <a
+                        href="https://himanshu-vishwakarma.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors group/link"
+                      >
+                        <span className="group-hover/link:underline">View Project</span>
+                        <ExternalLink className="group-hover/link:rotate-45 transition-transform" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Movie Website Project */}
+                <div className="group relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
+                  <div className="relative bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 ring-1 ring-gray-700/50 hover:ring-purple-500/50 transition-all duration-300">
+                    <div className="flex flex-col gap-4">
+                      <div className="flex items-start justify-between">
                         <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
                           Movie Website
                         </h3>
-                        <p className="text-gray-300 mb-6 max-w-2xl">
-                          A Next.js-powered web app for downloading movies and series, featuring a clean UI and hosted on Vercel.
-                          Built with modern web technologies and optimized for performance.
-                        </p>
+                        <div className="flex space-x-4">
+                          {['Next.js', 'React', 'Tailwind'].map((tech, idx) => (
+                            <span
+                              key={idx}
+                              className="px-3 py-1 text-sm bg-gray-700/50 rounded-full hover:bg-blue-500/20 transition-colors"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex space-x-4">
-                        {['Next.js', 'React', 'Tailwind'].map((tech, idx) => (
-                          <span 
-                            key={idx}
-                            className="px-3 py-1 text-sm bg-gray-700/50 rounded-full hover:bg-blue-500/20 transition-colors"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                      <p className="text-gray-300 max-w-full">
+                        A Next.js-powered web app for downloading movies and series, featuring a clean UI and hosted on Vercel.
+                        Built with modern web technologies and optimized for performance.
+                      </p>
                     </div>
                     <div className="mt-6">
                       <a
