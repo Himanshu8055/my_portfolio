@@ -256,7 +256,7 @@ const Portfolio = () => {
                         <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mr-2">
                           Personal Portfolio
                         </h3>
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-2">
                           {['vite', 'React', 'Tailwind'].map((tech, idx) => (
                             <span
                               key={idx}
@@ -295,7 +295,7 @@ const Portfolio = () => {
                         <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
                           Movie Website
                         </h3>
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-2">
                           {['Next.js', 'React', 'Tailwind'].map((tech, idx) => (
                             <span
                               key={idx}
