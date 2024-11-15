@@ -253,7 +253,7 @@ const Portfolio = () => {
                   <div className="relative bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 ring-1 ring-gray-700/50 hover:ring-purple-500/50 transition-all duration-300">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-start justify-between">
-                        <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+                        <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mr-2">
                           Personal Portfolio
                         </h3>
                         <div className="flex space-x-4">
