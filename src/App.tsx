@@ -162,7 +162,7 @@ const Portfolio = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
             <div className="container mx-auto px-4 relative">
               <div className="text-center space-y-8">
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold opacity-0 animate-fade-in">
+                <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold opacity-0 animate-fade-in">
                   <span className="inline-block hover:animate-bounce-slow bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
                     HIMANSHU
                   </span>
@@ -174,7 +174,7 @@ const Portfolio = () => {
                 <p className="text-2xl md:text-3xl text-gray-300 max-w-3xl mx-auto opacity-0 animate-fade-in-delay-1">
                   Frontend Developer  
                 </p>
-                <div className="flex justify-center gap-6 text-gray-300 opacity-0 animate-fade-in-delay-2">
+                <div className="flex justify-center text-sm md:text-lg lg:text-xl gap-6 text-gray-300 opacity-0 animate-fade-in-delay-2">
                   <a 
                     href="mailto:khv8055@gmail.com"
                     className="group flex items-center gap-2 hover:text-blue-400 transition-colors duration-300"
@@ -189,8 +189,8 @@ const Portfolio = () => {
                     </span>
                   </span>
                 </div>
-                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-                  <ChevronDown size={32} className="text-gray-400" />
+                <div className="absolute  left-1/2 transform -translate-x-1/2 animate-bounce">
+                  <ChevronDown size={32} className="text-gray-400"/>
                 </div>
               </div>
             </div>
