@@ -340,19 +340,19 @@ const Portfolio = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500" />
                 {[
                   {
-                    year: "2020 - 2023",
+                    year: "2021 - 2024",
                     degree: "Bachelor of Computer Applications",
-                    institution: "Veer Bahadur Singh Purvanchal University",
+                    institution: "Mahatma Gandhi Kashi Vidyapeeth",
                     description: "Focused on computer science fundamentals, programming, and web development."
                   },
                   {
-                    year: "2019 - 2020",
+                    year: "2020 - 2021",
                     degree: "Intermediate (12th)",
                     institution: "UP Board",
                     description: "Completed higher secondary education with focus on mathematics and computer science."
                   },
                   {
-                    year: "2017 - 2019",
+                    year: "2018 - 2019",
                     degree: "High School (10th)",
                     institution: "CBSE Board",
                     description: "Completed secondary education with distinction, laying strong foundation in science and mathematics."
