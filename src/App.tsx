@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import {
-  Github, Mail, MapPin, Terminal, Code, Database,
-  Book, ChevronDown, ExternalLink, Brain, Puzzle,
-  Cpu, Radio, Waves, Laptop, Share2, Code2, MessageSquare
-} from 'lucide-react';
+import { Mail, MapPin, ChevronDown } from 'lucide-react';
+import Education from './components/Education';
 import { LoadingScreen } from './components/LoadingScreen';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -48,37 +47,6 @@ const Portfolio = () => {
   }, []);
 
   // Technical Skills
-  const skills = {
-    languages: [
-      { name: "HTML5", icon: <Code2 />, proficiency: 90 },
-      { name: "CSS3", icon: <Laptop />, proficiency: 85 },
-      { name: "JavaScript", icon: <Terminal />, proficiency: 88 },
-      { name: "TypeScript", icon: <Code />, proficiency: 82 }
-    ],
-    frameworks: [
-      { name: "React.js", icon: <Radio />, proficiency: 90 },
-      { name: "Next.js", icon: <Share2 />, proficiency: 85 },
-      { name: "Tailwind CSS", icon: <Waves />, proficiency: 88 }
-    ],
-    tools: [
-      { name: "Git", icon: <Database />, proficiency: 85 },
-      { name: "GitHub", icon: <Github />, proficiency: 88 },
-      { name: "npm", icon: <Terminal />, proficiency: 80 },
-      { name: "Yarn", icon: <Cpu />, proficiency: 80 }
-    ],
-    // Soft Skills
-    softSkills: [
-      { name: "Logical Reasoning", icon: <Brain />, proficiency: 90 },
-      { name: "Problem Solving", icon: <Puzzle />, proficiency: 88 },
-      { name: "Coding", icon: <Code2 />, proficiency: 85 }
-    ],
-    // Spoken Languages
-    spokenLanguages: [
-      { name: "Hindi", icon: <MessageSquare />, proficiency: 95 },
-      { name: "English", icon: <MessageSquare />, proficiency: 85 }
-    ]
-  };
-
   const CustomCursor = () => (
     <div
       ref={cursorRef}
@@ -197,184 +165,17 @@ const Portfolio = () => {
 
           {/* Skills Section */}
           <section id="skills" className="py-20 relative">
-            <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-                  Technical Expertise
-                </span>
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {Object.entries(skills).map(([category, items]) => (
-                  <div key={category} className="perspective-1000">
-                    <div className="group relative transform transition-all duration-500 hover:rotate-y-10">
-                      <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
-                      <div className="relative bg-gray-800/50 backdrop-blur-lg p-6 rounded-lg border border-gray-700">
-                        <h3 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-                          {category}
-                        </h3>
-                        <div className="space-y-4">
-                          {items.map((skill, idx) => (
-                            <div key={idx} className="group/skill">
-                              <div className="flex items-center gap-3 mb-2">
-                                <span className="text-purple-400 group-hover/skill:rotate-12 transition-transform">
-                                  {skill.icon}
-                                </span>
-                                <span className="font-medium">{skill.name}</span>
-                              </div>
-                              <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                                <div
-                                  className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-1000 group-hover/skill:animate-pulse"
-                                  style={{ width: `${skill.proficiency}%` }}
-                                />
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Skills />
           </section>
 
           {/* Projects Section */}
           <section id="projects" className="py-20 relative overflow-hidden">
-            <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-                  Featured Projects
-                </span>
-              </h2>
-              <div className="max-w-4xl mx-auto space-y-16">
-                {/* Portfolio Project */}
-                <div className="group relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
-                  <div className="relative bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 ring-1 ring-gray-700/50 hover:ring-purple-500/50 transition-all duration-300">
-                    <div className="flex flex-col gap-4">
-                      <div className="flex items-start justify-between">
-                        <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mr-2">
-                          Personal Portfolio
-                        </h3>
-                        <div className="flex space-x-2">
-                          {['vite', 'React', 'Tailwind'].map((tech, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1 text-sm bg-gray-700/50 rounded-full hover:bg-blue-500/20 transition-colors"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-gray-300 max-w-full">
-                        A modern, responsive portfolio website showcasing my skills, projects, and educational background.
-                        Built with React and styled with Tailwind CSS, featuring smooth animations and interactive elements.
-                      </p>
-                    </div>
-                    <div className="mt-6">
-                      <a
-                        href="https://himanshu-vishwakarma.vercel.app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors group/link"
-                      >
-                        <span className="group-hover/link:underline">View Project</span>
-                        <ExternalLink className="group-hover/link:rotate-45 transition-transform" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Movie Website Project */}
-                <div className="group relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
-                  <div className="relative bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 ring-1 ring-gray-700/50 hover:ring-purple-500/50 transition-all duration-300">
-                    <div className="flex flex-col gap-4">
-                      <div className="flex items-start justify-between">
-                        <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-                          Movie Website
-                        </h3>
-                        <div className="flex space-x-2">
-                          {['Next.js', 'React', 'Tailwind'].map((tech, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1 text-sm bg-gray-700/50 rounded-full hover:bg-blue-500/20 transition-colors"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-gray-300 max-w-full">
-                        A Next.js-powered web app for downloading movies and series, featuring a clean UI and hosted on Vercel.
-                        Built with modern web technologies and optimized for performance.
-                      </p>
-                    </div>
-                    <div className="mt-6">
-                      <a
-                        href="https://moviflixx.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors group/link"
-                      >
-                        <span className="group-hover/link:underline">View Project</span>
-                        <ExternalLink className="group-hover/link:rotate-45 transition-transform" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Projects />
           </section>
 
           {/* Education Timeline */}
           <section id="education" className="py-20 relative">
-            <div className="container mx-auto px-4">
-              <h2 className="text-5xl font-bold text-center mb-16">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-red-400">
-                  Educational Journey
-                </span>
-              </h2>
-              <div className="max-w-4xl mx-auto relative">
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500" />
-                {[
-                  {
-                    year: "2021 - 2024",
-                    degree: "Bachelor of Computer Applications",
-                    institution: "Mahatma Gandhi Kashi Vidyapeeth",
-                    description: "Focused on computer science fundamentals, programming, and web development."
-                  },
-                  {
-                    year: "2020 - 2021",
-                    degree: "Intermediate (12th)",
-                    institution: "UP Board",
-                    description: "Completed higher secondary education with focus on mathematics and computer science."
-                  },
-                  {
-                    year: "2018 - 2019",
-                    degree: "High School (10th)",
-                    institution: "CBSE Board",
-                    description: "Completed secondary education with distinction, laying strong foundation in science and mathematics."
-                  }
-                ].map((edu, index) => (
-                  <div key={index} className={`relative flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} mb-8`}>
-                    <div className="w-1/2 relative group">
-                      <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
-                      <div className="relative bg-gray-800/50 backdrop-blur-lg p-6 rounded-lg border border-gray-700">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Book className="text-purple-400" />
-                          <span className="text-sm text-purple-400">{edu.year}</span>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">{edu.degree}</h3>
-                        <p className="text-gray-400 mb-2">{edu.institution}</p>
-                        <p className="text-sm text-gray-500">{edu.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Education />
           </section>
         </main>
       </div>
