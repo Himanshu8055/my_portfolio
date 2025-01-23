@@ -12,7 +12,7 @@ function Projects() {
             title: 'Movie Website',
             description: 'A Next.js-powered web app for downloading movies and series, featuring a clean UI and hosted on Vercel. Built with modern web technologies and optimized for performance.',
             tech_used: ['Next.js', 'Tailwind'],
-            link: 'https://himanshu-vishwakarma.vercel.app'
+            link: 'https://moviflixx.vercel.app/'
         },
         {
             title: 'Todo App',
