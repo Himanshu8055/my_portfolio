@@ -54,7 +54,7 @@ const Portfolio = () => {
       style={{
         background: 'rgba(255, 255, 255, 0.2)',
         borderRadius: '50%',
-        transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+        transform: `translate(${mousePosition.x -12}px, ${mousePosition.y -10}px)`,
         transition: 'transform 0.1s ease-out'
       }}
     />
@@ -139,7 +139,7 @@ const Portfolio = () => {
                   </span>
                 </h1>
                 <p className="text-2xl md:text-3xl text-gray-300 max-w-3xl mx-auto opacity-0 animate-fade-in-delay-1">
-                  Frontend Developer
+                  Fullstack Developer
                 </p>
                 <div className="flex justify-center text-sm md:text-lg lg:text-xl gap-6 text-gray-300 opacity-0 animate-fade-in-delay-2">
                   <a
@@ -152,7 +152,7 @@ const Portfolio = () => {
                   <span className="flex items-center gap-2">
                     <MapPin className="animate-pulse" />
                     <span className="hover:text-blue-400 transition-colors duration-300">
-                      Jaunpur, Uttar Pradesh
+                      Goregaon (East), Mumbai
                     </span>
                   </span>
                 </div>
