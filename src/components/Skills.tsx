@@ -1,19 +1,4 @@
-import {
-    Github,
-    Terminal,
-    Code,
-    Database,
-    Brain,
-    Puzzle,
-    Cpu,
-    Radio,
-    Waves,
-    Laptop,
-    Share2,
-    Code2,
-    MessageSquare
-} from 'lucide-react';
-import React from 'react';
+import { Github, Terminal, Code, Database, Brain, Puzzle, Cpu, Radio, Waves, Laptop, Share2, Code2, MessageSquare } from 'lucide-react';
 
 type SkillItem = {
     name: string;
