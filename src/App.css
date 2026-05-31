@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .rotate-y-10 {
+    transform: rotateY(10deg);
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    25% { transform: translateY(-10px) translateX(5px); }
+    50% { transform: translateY(0px) translateX(10px); }
+    75% { transform: translateY(10px) translateX(5px); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
 .bg-grid-pattern {
   background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);

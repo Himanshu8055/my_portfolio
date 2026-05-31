@@ -1,6 +1,4 @@
-'use client'
-
-import { Book } from 'lucide-react';
+import { GraduationCap, Calendar, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function Education() {
@@ -9,65 +7,66 @@ function Education() {
       year: "2021 - 2024",
       degree: "Bachelor of Computer Applications",
       institution: "Mahatma Gandhi Kashi Vidyapeeth",
-      description: "Focused on computer science fundamentals, programming, and web development."
+      percentage: "61.9%",
+      description: "Comprehensive curriculum covering data structures, algorithms, web development, and software engineering principles."
     },
     {
       year: "2020 - 2021",
       degree: "Intermediate (12th)",
       institution: "UP Board",
-      description: "Completed higher secondary education with focus on mathematics and computer science."
+      percentage: "65.4%",
+      description: "Specialized in Mathematics and Computer Science with focus on programming fundamentals."
     },
     {
       year: "2018 - 2019",
       degree: "High School (10th)",
       institution: "CBSE Board",
-      description: "Completed secondary education with distinction, laying strong foundation in science and mathematics."
+      percentage: "55.8%",
+      description: "Strong foundation in Science and Mathematics with distinction in core subjects."
     }
   ];
 
   return (
-    <div className="container mx-auto px-4">
-      <h2 className="text-5xl font-bold text-center mb-20">
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-red-400">
-          Educational Journey
-        </span>
-      </h2>
-
-      <div className="relative max-w-4xl mx-auto before:absolute before:inset-0 before:flex before:items-center">
-        {/* Vertical Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 z-0" />
-
-        <div className="space-y-16 relative z-10">
-          {educations.map((edu, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'} relative`}
-            >
-              {/* Timeline Dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 bg-white w-5 h-5 rounded-full border-4 border-purple-500 z-20" />
-
-              {/* Card */}
-              <div className={`md:w-1/2 px-4 ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-500 group-hover:duration-200" />
-                  <div className="relative bg-gray-900/60 backdrop-blur-xl p-6 rounded-2xl border border-gray-700 shadow-lg">
-                    <div className="flex items-center gap-2 mb-1">
-                      <Book className="text-purple-400" />
-                      <span className="text-sm text-purple-400">{edu.year}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-1 text-white">{edu.degree}</h3>
-                    <p className="text-gray-300 mb-1">{edu.institution}</p>
-                    <p className="text-sm text-gray-400">{edu.description}</p>
-                  </div>
+    <div className="relative">
+      {/* Timeline Line */}
+      <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-full" />
+      
+      <div className="space-y-8">
+        {educations.map((edu, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className={`flex flex-col md:flex-row gap-6 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:flex-row-reverse'}`}
+          >
+            {/* Timeline Dot */}
+            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg z-10">
+              <GraduationCap size={14} className="text-white" />
+            </div>
+            
+            {/* Content */}
+            <div className="ml-12 md:ml-0 w-full md:w-1/2">
+              <div className="glass-card p-6 hover-glow transition-all duration-300">
+                <div className="flex items-center gap-2 mb-3">
+                  <Calendar size={14} className="text-purple-400" />
+                  <span className="text-sm text-purple-300">{edu.year}</span>
                 </div>
+                
+                <h3 className="text-xl font-bold text-white mb-1">{edu.degree}</h3>
+                <p className="text-purple-400 text-sm mb-3">{edu.institution}</p>
+                
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 mb-3">
+                  <Award size={12} className="text-purple-400" />
+                  <span className="text-xs text-gray-300">Score: {edu.percentage}</span>
+                </div>
+                
+                <p className="text-gray-400 text-sm leading-relaxed">{edu.description}</p>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

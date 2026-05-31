@@ -6,25 +6,31 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+      },
       animation: {
-        'bounce-slow': 'bounce 3s infinite',
-        'float': 'float 10s infinite',
-        'fade-in': 'fadeIn 1s ease-in forwards',
-        'fade-in-delay-1': 'fadeIn 1s ease-in 0.5s forwards',
-        'fade-in-delay-2': 'fadeIn 1s ease-in 1s forwards',
+        'spin-slow': 'spin-slow 2s linear infinite',
+        'bounce-slow': 'bounce 2s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
       },
       keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        'pulse-glow': {
+          '0%, 100%': { opacity: 0.5 },
+          '50%': { opacity: 1 },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
-      perspective: {
-        '1000': '1000px',
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
