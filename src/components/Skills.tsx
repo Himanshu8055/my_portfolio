@@ -1,7 +1,4 @@
-import { 
-  Code2, Globe, Database, Layout, Server, GitBranch, 
-  Brain, Users, MessageSquare, Figma, Terminal, Cloud 
-} from 'lucide-react';
+import { Database, Layout, Server, Brain, } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface SkillCategory {

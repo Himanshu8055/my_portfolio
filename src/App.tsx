@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Mail, MapPin, ChevronDown, Github, Linkedin, Phone, FileText, Sparkles } from 'lucide-react';
+import { Mail, MapPin, ChevronDown, Github, Linkedin, FileText, Sparkles } from 'lucide-react';
 import Education from './components/Education';
 import { LoadingScreen } from './components/LoadingScreen';
 import Skills from './components/Skills';
