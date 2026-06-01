@@ -123,7 +123,7 @@ const Portfolio = () => {
                     </button>
                     <a
                       href="/Himanshu_Resume.pdf"
-                      download="Himanshu_Vishwakarma_Resume.pdf"
+                      download="Himanshu_Resume.pdf"
                       className="px-6 py-3 rounded-xl glass-card border border-white/10 text-white font-medium hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 inline-flex items-center gap-2"
                     >
                       <FileText size={18} />
