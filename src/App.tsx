@@ -97,12 +97,12 @@ const Portfolio = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div className="space-y-6">
-                  <div className="space-y-2">
+                  <div className="mt-24 text-center space-y-4">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
                       <Sparkles size={14} className="text-purple-400" />
                       <span className="text-xs text-gray-300 tracking-wide">FULL STACK DEVELOPER</span>
                     </div>
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                    <h1 className="text-5xl text-center md:text-left md:text-6xl lg:text-7xl font-bold leading-tight">
                       <span className="text-white">Himanshu</span>
                       <br />
                       <span className="gradient-text">Vishwakarma</span>
@@ -131,7 +131,7 @@ const Portfolio = () => {
                     </a>
                   </div>
 
-                  <div className="flex gap-6 pt-4">
+                  <div className="flex justify-center md:justify-start gap-6 pt-4">
                     {[
                       { icon: Github, label: 'GitHub', href: 'https://github.com/Himanshu8055' },
                       { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/himanshu-vish' },
