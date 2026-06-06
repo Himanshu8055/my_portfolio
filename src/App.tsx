@@ -97,24 +97,23 @@ const Portfolio = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div className="space-y-6">
-                  <div className="mt-24 text-center space-y-4">
+                  <div className="mt-24 text-center lg:text-start space-y-4">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
                       <Sparkles size={14} className="text-purple-400" />
                       <span className="text-xs text-gray-300 tracking-wide">FULL STACK DEVELOPER</span>
                     </div>
-                    <h1 className="text-5xl text-center md:text-left md:text-6xl lg:text-7xl font-bold leading-tight">
+                    <h1 className="text-5xl text-center lg:text-left md:text-6xl lg:text-7xl font-bold leading-tight">
                       <span className="text-white">Himanshu</span>
                       <br />
                       <span className="gradient-text">Vishwakarma</span>
                     </h1>
                   </div>
 
-                  <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
-                    Crafting scalable web applications with modern technologies.
-                    3+ years of experience in full-stack development.
+                  <p className="text-gray-300 text-lg text-center lg:text-start leading-relaxed max-w-lg mx-auto lg:mx-0">
+                    Crafting scalable web applications with modern technologies. 3+ years of experience in full-stack development.
                   </p>
 
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                     <button
                       onClick={() => scrollToSection('projects')}
                       className="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
@@ -131,7 +130,7 @@ const Portfolio = () => {
                     </a>
                   </div>
 
-                  <div className="flex justify-center md:justify-start gap-6 pt-4">
+                  <div className="flex justify-center lg:justify-start gap-6 pt-4">
                     {[
                       { icon: Github, label: 'GitHub', href: 'https://github.com/Himanshu8055' },
                       { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/himanshu-vish' },

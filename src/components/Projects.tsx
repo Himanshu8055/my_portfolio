@@ -52,12 +52,12 @@ function Projects() {
       tech_used: ["React", "Tailwind", "Framer Motion"],
       link: "https://himanshu-vishwakarma.vercel.app"
     },
-    {
-      title: "Movie Website",
-      description: "Next.js-powered streaming platform with optimized performance and clean UI.",
-      tech_used: ["Next.js", "Tailwind"],
-      link: "https://moviflixx.vercel.app/"
-    },
+    // {
+    //   title: "Movie Website",
+    //   description: "Next.js-powered streaming platform with optimized performance and clean UI.",
+    //   tech_used: ["Next.js", "Tailwind"],
+    //   link: "https://moviflixx.vercel.app/"
+    // },
     {
       title: "Todo App",
       description: "Feature-rich task manager with search, sort, and persistent local storage.",
