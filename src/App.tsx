@@ -100,7 +100,7 @@ const Portfolio = () => {
                   <div className="mt-24 text-center lg:text-start space-y-4">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
                       <Sparkles size={14} className="text-purple-400" />
-                      <span className="text-xs text-gray-300 tracking-wide">FULL STACK DEVELOPER</span>
+                      <span className="text-xs text-gray-300 tracking-wide">FULL STACK AI DEVELOPER</span>
                     </div>
                     <h1 className="text-5xl text-center lg:text-left md:text-6xl lg:text-7xl font-bold leading-tight">
                       <span className="text-white">Himanshu</span>
@@ -110,7 +110,7 @@ const Portfolio = () => {
                   </div>
 
                   <p className="text-gray-300 text-lg text-center lg:text-start leading-relaxed max-w-lg mx-auto lg:mx-0">
-                    Crafting scalable web applications with modern technologies. 3+ years of experience in full-stack development.
+                    Crafting scalable web applications with modern technologies. 2+ years of experience in full-stack development.
                   </p>
 
                   <div className="flex flex-wrap justify-center lg:justify-start gap-4">
@@ -153,7 +153,7 @@ const Portfolio = () => {
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { value: '10+', label: 'Projects Completed', icon: '🚀' },
-                    { value: '3+', label: 'Years Experience', icon: '💼' },
+                    { value: '2+', label: 'Years Experience', icon: '💼' },
                     { value: '15+', label: 'Happy Clients', icon: '⭐' },
                     { value: '24/7', label: 'Support', icon: '🔧' }
                   ].map((stat, idx) => (

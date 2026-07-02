@@ -12,21 +12,13 @@ interface Project {
 function Projects() {
   const projects: Project[] = [
     {
-      title: "Swift Response Alert",
-      description: "Enterprise Personal Emergency Response System (PERS) with medical alert devices and caregiver app. Features real-time GPS tracking, fall detection, two-way voice, and 24/7 emergency monitoring.",
-      tech_used: ["Next.js", "Stripe", "MongoDB", "WebSockets"],
-      link: "https://swiftresponsealert.com/",
-      featured: true
+      title: "Personal Portfolio",
+      description: "Modern portfolio showcasing technical skills and projects with glassmorphism design and smooth animations.",
+      tech_used: ["React", "Tailwind", "Framer Motion"],
+      link: "https://himanshu-vishwakarma.vercel.app"
     },
     {
-      title: "Procall Hub",
-      description: "Professional communication hub for centralized call management and team collaboration. Streamlines voice interactions with advanced routing and analytics.",
-      tech_used: ["Next.js", "WebRTC", "Socket.io", "PostgreSQL", "Tailwind"],
-      link: "https://www.procallhub.com/",
-      featured: true
-    },
-    {
-      title: "Iplanet - Company Website",
+      title: "Iplanetbpo - Company Website",
       description: "Enterprise-grade company website with integrated admin dashboard for managing job applicants. Features include real-time analytics, SEO optimization, and responsive design.",
       tech_used: ["React.js", "Node.js", "MySQL", "Tailwind"],
       link: "https://iplanetbpo.net/",
@@ -40,6 +32,13 @@ function Projects() {
       featured: true
     },
     {
+      title: "Procall Hub",
+      description: "Professional communication hub for centralized call management and team collaboration. Streamlines voice interactions with advanced routing and analytics.",
+      tech_used: ["Next.js", "WebRTC", "Socket.io", "PostgreSQL", "Tailwind"],
+      link: "https://www.procallhub.com/",
+      featured: true
+    },
+    {
       title: "Precision Career Connect",
       description: "AI-powered job portal with resume builder, recruiter workflows, and advanced candidate matching system.",
       tech_used: ["Next.js", "PostgreSQL", "Tailwind", "AI"],
@@ -47,10 +46,11 @@ function Projects() {
       featured: true
     },
     {
-      title: "Personal Portfolio",
-      description: "Modern portfolio showcasing technical skills and projects with glassmorphism design and smooth animations.",
-      tech_used: ["React", "Tailwind", "Framer Motion"],
-      link: "https://himanshu-vishwakarma.vercel.app"
+      title: "Swift Response Alert",
+      description: "Enterprise Personal Emergency Response System (PERS) with medical alert devices and caregiver app. Features real-time GPS tracking, fall detection, two-way voice, and 24/7 emergency monitoring.",
+      tech_used: ["Next.js", "Stripe", "MongoDB", "WebSockets"],
+      link: "https://swiftresponsealert.com/",
+      featured: true
     },
     // {
     //   title: "Movie Website",
@@ -87,15 +87,15 @@ function Projects() {
                 </span>
               </div>
             )}
-            
+
             {/* Title */}
             <h3 className="text-xl font-bold text-white mb-2 line-clamp-1">{project.title}</h3>
-            
+
             {/* Description */}
             <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
               {project.description}
             </p>
-            
+
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tech_used.map((tech, techIdx) => (
@@ -107,7 +107,7 @@ function Projects() {
                 </span>
               ))}
             </div>
-            
+
             {/* Link */}
             <a
               href={project.link}

@@ -1,4 +1,4 @@
-import { Database, Layout, Server, Brain, } from 'lucide-react';
+import { Database, Layout, Server, Brain, Code, } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface SkillCategory {
@@ -15,14 +15,14 @@ function Skills() {
       skills: [
         { name: "React.js", level: 90 },
         { name: "Next.js", level: 85 },
-        { name: "Angular", level: 80 },
+        { name: "Angular", level: 65 },
         { name: "TypeScript", level: 88 },
         { name: "Tailwind CSS", level: 90 }
       ]
     },
     {
       name: "Backend Development",
-      icon: <Server size={20} />,
+      icon: <Code size={20} />,
       skills: [
         { name: "Node.js", level: 85 },
         { name: "Express.js", level: 85 },
